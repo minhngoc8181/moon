@@ -1,0 +1,361 @@
+<div id="content-body">        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="content-description" style="width: 100%;">
+                <div class="problem_container">
+                    <div style="display: flex">
+                        <h2 style="margin-top: 0.5em; margin-right: 0.5em;">
+                                    <a href="/problem_contest/9147/submissions/bianca/">
+                                        <i class="solved-problem-color ct-icon-solid ct-icon-check-circle"></i>
+                                    </a>
+                            <a href="/problem_contest/9147">Số đối xứng</a>
+                        </h2>
+                        <a href="/problem_contest/9147/submit" class="button" style="display: inline; margin: auto 0;">
+                            Submit
+                        </a>
+                    </div>
+
+                    <div>
+                        <span><strong>Time limit:</strong> 1.0s /</span>
+                        <span><strong>Memory limit:</strong> 1G</span>
+                        <p><strong>Points:</strong> 100</p>
+                    </div>
+                </div>
+        <div class="problem-description">
+            <div><p>Số đối xứng là số có cách viết giống nhau khi đọc từ trái sang phải và từ phải sang trái.</p>
+
+<p>Ví dụ: <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c39"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c37"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>99</mn><mo>,</mo><mn>121</mn><mo>,</mo><mn>1331</mn><mo>,</mo><mn>7</mn></math></mjx-assistive-mml></mjx-container> là các số đối xứng.</p>
+
+<p><strong>Yêu cầu</strong>: Cho số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container>. Hãy xác định số đơn vị cần tăng thêm ít nhất để biến <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> thành một số đối xứng.</p>
+
+<h4>Input</h4>
+
+<ul>
+<li>Dòng duy nhất chứa số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> có không quá <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>16</mn></math></mjx-assistive-mml></mjx-container> chữ số).</li>
+</ul>
+
+<h4>Output</h4>
+
+<ul>
+<li>Một số tự nhiên - là số đơn vị cần tăng thêm ít nhất để biến <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> thành một số đối xứng.</li>
+</ul>
+
+<h4>Sample Input 1</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="123
+" title="Click to copy">Copy</span></div><pre><code>123
+</code></pre>
+
+<h4>Sample Output 1</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="8
+" title="Click to copy">Copy</span></div><pre><code>8
+</code></pre>
+
+<h4>Sample Input 2</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="121
+" title="Click to copy">Copy</span></div><pre><code>121
+</code></pre>
+
+<h4>Sample Output 2</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="0
+" title="Click to copy">Copy</span></div><pre><code>0
+</code></pre>
+
+<h4>Subtask</h4>
+
+<ul>
+<li>Subtask 1 (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>80</mn></math></mjx-assistive-mml></mjx-container>% số điểm): <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> có không quá <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container> chữ số.</li>
+<li>Subtask 2 (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>20</mn></math></mjx-assistive-mml></mjx-container>% số điểm): <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> có không quá <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>16</mn></math></mjx-assistive-mml></mjx-container> chữ số.</li>
+</ul>
+</div>
+        </div>
+
+                <hr>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="content-description" style="width: 100%;">
+                <div class="problem_container">
+                    <div style="display: flex">
+                        <h2 style="margin-top: 0.5em; margin-right: 0.5em;">
+                            <a href="/problem_contest/9148">Bảng số B</a>
+                        </h2>
+                        <a href="/problem_contest/9148/submit" class="button" style="display: inline; margin: auto 0;">
+                            Submit
+                        </a>
+                    </div>
+
+                    <div>
+                        <span><strong>Time limit:</strong> 1.0s /</span>
+                        <span><strong>Memory limit:</strong> 1G</span>
+                        <p><strong>Points:</strong> 100</p>
+                    </div>
+                </div>
+        <div class="problem-description">
+            <div><p>Xét một bảng kích thước <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> dòng, <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> cột chứa các ô trống và các số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> hoặc <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container>. Bảng số được gọi là đẹp nếu như nó có các tính chất:</p>
+
+<ul>
+<li>Mỗi hàng và mỗi cột chứa đúng một số <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container>, một số <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container> và <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>−</mo><mn>2</mn></math></mjx-assistive-mml></mjx-container> ô trống.</li>
+<li>Bắt đầu từ góc trên cùng bên trái, bắt đầu di chuyển sang phải rồi theo hình xoắn ốc vào trong, các giá trị ở các ô chứa số sẽ xuất hiện theo thứ tự <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="2"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo></math></mjx-assistive-mml></mjx-container>.</li>
+</ul>
+
+<p>Hình dưới đây là ví dụ về một bảng số đẹp kích thước <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn></math></mjx-assistive-mml></mjx-container> x <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn></math></mjx-assistive-mml></mjx-container>:</p>
+
+<p><img src="https://cdn.chuyentin.net/ctoj/martor/4384ec60-a8de-4f37-902a-b1ad7b7af75f.png" alt="4384ec60-a8de-4f37-902a-b1ad7b7af75f.png"></p>
+
+<p><strong>Yêu cầu</strong>: Cho một số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container>. Bạn hãy tạo ra một bảng đẹp kích thước <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> x <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></p>
+
+<h4>Input</h4>
+
+<ul>
+<li>Vào từ thiết bị nhập chuẩn một số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> duy nhất trên một dòng (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>200</mn></math></mjx-assistive-mml></mjx-container>).</li>
+</ul>
+
+<h4>Output</h4>
+
+<ul>
+<li>Nếu có lời giải, in ra <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> dòng, mỗi dòng có <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> số được phân tách bằng một dấu cách, biểu diễn bảng được yêu cầu, trong đó ô trống được ghi bởi số <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></mjx-assistive-mml></mjx-container>.</li>
+<li>Nếu không có lời giải, hãy ghi giá trị <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container> trên một dòng duy nhất. </li>
+<li>Nếu có nhiều lời giải, bạn có thể in ra bất kỳ lời giải nào đúng</li>
+</ul>
+
+<h4>Sample Input</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="4
+" title="Click to copy">Copy</span></div><pre><code>4
+</code></pre>
+
+<h4>Sample Output</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="0 0 1 2
+2 1 0 0
+1 0 2 0
+0 2 0 1
+" title="Click to copy">Copy</span></div><pre><code>0 0 1 2
+2 1 0 0
+1 0 2 0
+0 2 0 1
+</code></pre>
+
+<h4>Ràng buộc</h4>
+
+<ul>
+<li>Subtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn></math></mjx-assistive-mml></mjx-container>% số điểm): <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>≤</mo><mn>15</mn></math></mjx-assistive-mml></mjx-container>.</li>
+<li>SUbtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>50</mn></math></mjx-assistive-mml></mjx-container>% số điểm): Không có ràng buộc bổ sung.</li>
+</ul>
+</div>
+        </div>
+
+                <hr>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="content-description" style="width: 100%;">
+                <div class="problem_container">
+                    <div style="display: flex">
+                        <h2 style="margin-top: 0.5em; margin-right: 0.5em;">
+                            <a href="/problem_contest/9149">Chia hết (THTTQ bảng B 2025)</a>
+                        </h2>
+                        <a href="/problem_contest/9149/submit" class="button" style="display: inline; margin: auto 0;">
+                            Submit
+                        </a>
+                    </div>
+
+                    <div>
+                        <span><strong>Time limit:</strong> 1.0s /</span>
+                        <span><strong>Memory limit:</strong> 256M</span>
+                        <p><strong>Points:</strong> 100</p>
+                    </div>
+                </div>
+        <div class="problem-description">
+            <div><p>Cho số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></mjx-assistive-mml></mjx-container> và một số nguyên dương <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></mjx-assistive-mml></mjx-container>.</p>
+
+<p>Bạn được phép bỏ đi một số chữ số trong biểu diễn thập phân của <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math></mjx-assistive-mml></mjx-container> (nếu muốn), giữ nguyên thứ tự các chữ số còn lại.</p>
+
+<p>Mục tiêu là tạo ra số tự nhiên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml></mjx-container> lớn nhất thoả mãn: <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml></mjx-container> chia hết cho <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></mjx-assistive-mml></mjx-container>.</p>
+
+<h4>Yêu cầu</h4>
+
+<ul>
+<li>Tìm giá trị <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml></mjx-container> lớn nhất có thể tạo được theo cách trên.</li>
+<li>Nếu không thể tạo ra số chia hết cho <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></mjx-assistive-mml></mjx-container>, in ra ký tự "!" (dấu chấm than, mã ASCII <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>33</mn></math></mjx-assistive-mml></mjx-container>).</li>
+</ul>
+
+<h4>Input</h4>
+
+<ul>
+<li>Dòng đầu chứa số nguyên dương <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>T</mi><mo>≤</mo><mn>10</mn></math></mjx-assistive-mml></mjx-container>) - số lượng bộ test.</li>
+<li>Mỗi bộ test gồm một dòng chứa hai số nguyên <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>,</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container> (&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;≤&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;≤&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;1000&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;≤&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;≤&lt;/mo&gt;&lt;mn&gt;1000&lt;/mn&gt;&lt;/mrow&gt;&lt;/math&gt;).</li>
+</ul>
+
+<h4>Output</h4>
+
+<ul>
+<li>Với mỗi bộ test, in ra giá trị <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math></mjx-assistive-mml></mjx-container> tìm được.</li>
+<li>Nếu không tồn tại, in ra "!".</li>
+</ul>
+
+<h4>Sample Input</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="6
+982025 81
+13570 100
+11111111 2
+123456789 9
+10001389 139
+9876543210123456789 11
+" title="Click to copy">Copy</span></div><pre><code>6
+982025 81
+13570 100
+11111111 2
+123456789 9
+10001389 139
+9876543210123456789 11
+</code></pre>
+
+<h4>Sample Output</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="2025
+0
+!
+123456789
+10008
+987654321123456789
+" title="Click to copy">Copy</span></div><pre><code>2025
+0
+!
+123456789
+10008
+987654321123456789
+</code></pre>
+
+<h4>Ràng buộc</h4>
+
+<ul>
+<li>Subtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>30</mn></math></mjx-assistive-mml></mjx-container>% số điểm): <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.393em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>≤</mo><msup><mn>10</mn><mrow data-mjx-texclass="ORD"><mn>18</mn></mrow></msup></math></mjx-assistive-mml></mjx-container>.</li>
+<li>Subtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>30</mn></math></mjx-assistive-mml></mjx-container>% số điểm): <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.393em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>≤</mo><msup><mn>10</mn><mrow data-mjx-texclass="ORD"><mn>100</mn></mrow></msup></math></mjx-assistive-mml></mjx-container>.</li>
+<li>SUbtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>40</mn></math></mjx-assistive-mml></mjx-container>% số điểm): Không có ràng buộc bổ sung.</li>
+</ul>
+</div>
+        </div>
+
+                <hr>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="content-description" style="width: 100%;">
+                <div class="problem_container">
+                    <div style="display: flex">
+                        <h2 style="margin-top: 0.5em; margin-right: 0.5em;">
+                            <a href="/problem_contest/9150">Thử thách 5 quân xe B</a>
+                        </h2>
+                        <a href="/problem_contest/9150/submit" class="button" style="display: inline; margin: auto 0;">
+                            Submit
+                        </a>
+                    </div>
+
+                    <div>
+                        <span><strong>Time limit:</strong> 1.0s /</span>
+                        <span><strong>Memory limit:</strong> 256M</span>
+                        <p><strong>Points:</strong> 100</p>
+                    </div>
+                </div>
+        <div class="problem-description">
+            <div><p>Trong giờ giải lao trên lớp, Alice nghĩ ra một trò chơi để đố Bob. Alice vẽ ra giấy trắng một bảng kích thước <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container> x <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container>, các hàng được đánh số từ <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> đến <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container> từ trên xuống dưới, và các cột được đánh số từ <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> đến <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container> từ trái sang phải. Alice đã bí mật tô đúng <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>33</mn></math></mjx-assistive-mml></mjx-container> ô thành màu đen. Alice yêu cầu Bob cần phải tìm ra một tập <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math></mjx-assistive-mml></mjx-container> ô đen sao cho nếu đặt <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math></mjx-assistive-mml></mjx-container> quân xe vào đó thì: không có hai quân xe nào nằm cùng hàng hoặc cùng cột.</p>
+
+<p>Bob không được nhìn bảng; thay vào đó, Bob được phép hỏi nhiều lần Alice: trong một tập các ô có bao nhiêu ô trong đó là màu đen. Alice luôn trả lời đúng theo cấu hình bí mật. Vì giờ giải lao rất ngắn nên Bob cần phải đặt càng ít câu hỏi càng tốt để tìm ra một tập <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math></mjx-assistive-mml></mjx-container> ô đen hợp lệ.</p>
+
+<h4>Input</h4>
+
+<ul>
+<li>Dòng đầu chứa số nguyên dương <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>T</mi><mo>≤</mo><mn>100</mn></math></mjx-assistive-mml></mjx-container>) - số trường hợp test. Dưới đây là mô tả của các trường hợp test.</li>
+</ul>
+
+<h4>Tương tác</h4>
+
+<ul>
+<li><p>Để thực hiện phép hỏi, bạn cần chọn ra <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math></mjx-assistive-mml></mjx-container> cặp số nguyên &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; là toạ độ của các ô trong tập các ô cần hỏi và in ra luồng dữ liệu chuẩn một dòng dưới dạng sau:</p></li>
+<li><p>"? &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; ... &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;".</p></li>
+</ul>
+
+<p>Ngay sau đó bạn đọc từ luồng dữ liệu chuẩn một số nguyên là số lượng ô màu đen trong tập ô đã chọn.</p>
+
+<p>Khi đã tìm được <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math></mjx-assistive-mml></mjx-container> ô đen có toạ độ &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msub&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; theo yêu cầu, bạn in ra luồng dữ liệu chuẩn một dòng dưới dạng sau:</p>
+
+<ul>
+<li>"? &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt; &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;".</li>
+</ul>
+
+<p>Sau khi in ra, đừng quên xuất ký tự xuống dòng (end of line) và làm sạch bộ đệm đầu ra (flush the output). Nếu
+không, bạn sẽ gặp lỗi. Để làm điều này, hãy sử dụng:</p>
+
+<ul>
+<li><code>fflush(stdout)</code> hoặc <code>cout.flush()</code> trong C++;</li>
+<li><code>System.out.flush()</code> trong Java;</li>
+<li><code>flush(output)</code> trong Pascal;</li>
+<li><code>stdout.flush()</code> trong Python;</li>
+<li>Download file sau để hình dung tương tác.</li>
+</ul>
+
+<h4>Chấm điểm</h4>
+
+<p>Với mỗi test, nếu bạn trả lời đúng tập các điểm cần tìm, gọi <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi></math></mjx-assistive-mml></mjx-container> là số lần thực hiện phép hỏi lớn nhất trong toàn bộ các trường hợp test. Điểm cho mỗi test được tính như sau:</p>
+
+<ul>
+<li><mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></mjx-assistive-mml></mjx-container> điểm nếu <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3E"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c36"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo>&gt;</mo><mn>64</mn></math></mjx-assistive-mml></mjx-container>;</li>
+<li><mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>100</mn></math></mjx-assistive-mml></mjx-container>% số điểm nếu <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c39"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi><mo>≤</mo><mn>9</mn></math></mjx-assistive-mml></mjx-container>;</li>
+<li>Ngược lại bạn nhận được <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c39"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c39"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.9</mn><mo>−</mo><mo stretchy="false">(</mo><mi>Q</mi><mo>−</mo><mn>9</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> x <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c2E"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0.01</mn></math></mjx-assistive-mml></mjx-container>.</li>
+</ul>
+
+<h4>Ràng buộc</h4>
+
+<ul>
+<li>Subtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>30</mn></math></mjx-assistive-mml></mjx-container>% số điểm): Có đúng <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math></mjx-assistive-mml></mjx-container> ô được tô màu đen trong số các ô trên đường chéo chính (các ô có chỉ số hàng bằng chỉ số cột)</li>
+<li>Subtask <mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml></mjx-container> (<mjx-container class="MathJax" jax="CHTML" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c37"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>70</mn></math></mjx-assistive-mml></mjx-container>% số điểm): Không có ràng buộc gì thêm.</li>
+</ul>
+
+<h4>Sample input</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="1
+
+2
+
+0
+
+3
+
+" title="Click to copy">Copy</span></div><pre><code>1
+
+2
+
+0
+
+3
+
+</code></pre>
+
+<h4>Sample Output</h4>
+
+<div class="copy-clipboard"><span class="btn-clipboard" data-clipboard-text="? 3 1 1 2 2 3 3
+
+? 1 3 3
+
+? 3 4 4 5 5 6 6
+
+! 1 1 2 2 4 4 5 5 6 6
+" title="Click to copy">Copy</span></div><pre><code>? 3 1 1 2 2 3 3
+
+? 1 3 3
+
+? 3 4 4 5 5 6 6
+
+! 1 1 2 2 4 4 5 5 6 6
+</code></pre>
+</div>
+        </div>
+
+                <hr>
+            </div>
+        </div>
+</div>
