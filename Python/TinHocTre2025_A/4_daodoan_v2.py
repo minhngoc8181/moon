@@ -15,7 +15,7 @@ else:
     for i in range(start, text_length):
         maxDigit = max(maxDigit, int(text[i]))
     max_text = text
-    for i in range(text_length - 1, -1, -1):
+    for i in range(text_length - 1, start, -1):
         digit = int(text[i])
         if digit == maxDigit:
             new_text = text[:start] + text[start : i + 1][::-1] + text[i + 1 :]
