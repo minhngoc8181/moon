@@ -9,7 +9,7 @@ def check(end):
 
 
 count = 0
-for start in range(len(s) - 4):
+for start in range(len(s) - 3):
     for end in range(start + 3, len(s)):
         if check(end):
             count += 1
