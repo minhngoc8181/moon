@@ -1,0 +1,6 @@
+A = int(input())
+B = int(input())
+C = int(input())
+so_nho_nhat = min(A, B, C)
+so_lon_nhat = max(A, B, C)
+print(so_lon_nhat + so_nho_nhat)

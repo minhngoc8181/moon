@@ -1,0 +1,11 @@
+A = int(input())
+B = int(input())
+C = int(input())
+D = int(input())
+dai = max(A, B)
+rong = min(A, B)
+dai_1 = max(C, D)
+rong_1 = min(C,D)
+canh = rong + rong_1
+Nhat = max(dai, dai_1, canh)
+print(Nhat * Nhat)
