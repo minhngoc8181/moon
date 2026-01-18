@@ -1,0 +1,5 @@
+N = int(input())
+A = int(input())
+B = int(input())
+so_cuoi = A + (B * (N - 1))
+print((A + so_cuoi) * N // 2)
