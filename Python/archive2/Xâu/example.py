@@ -13,3 +13,4 @@ for c in first_string:
     if c in 'Tt':
         count += 1
 print(count)'''
+N = int(input())

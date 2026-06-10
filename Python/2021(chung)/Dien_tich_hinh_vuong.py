@@ -1,0 +1,11 @@
+A = int(input())
+B = int(input())
+C = int(input())
+D = int(input())
+cd_1 = max(A, B)
+cr_1 = min(A, B)
+cd_2 = max(C, D)
+cr_2 = min(C, D)
+dai = cr_1 + cr_2
+ans = max(cd_1, cd_2, dai)
+print(ans * ans)
